@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".SideActivity">
+
+    <TextView
+        android:id="@+id/currencyText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/currency"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:layout_marginTop="30dp"
+        android:textSize="34sp" />
+
+    <EditText
+        android:id="@+id/buckwheatPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/currencyText"
+        android:layout_marginTop="3sp"
+        android:layout_marginHorizontal="40sp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        android:backgroundTint="@color/tine"
+        android:text=""
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textView_hryvnia"
+        android:layout_below="@+id/buckwheatPrice"
+        android:text="@string/hryvnia"
+        android:layout_marginHorizontal="42sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:textColorHint="@color/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/hryvnias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView_hryvnia"
+        android:layout_marginTop="3sp"
+        android:layout_marginHorizontal="40sp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        android:backgroundTint="@color/tine"
+        android:text=""
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textView_dollars"
+        android:layout_below="@+id/hryvnias"
+        android:text="@string/dollars"
+        android:layout_marginHorizontal="42sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:textColorHint="@color/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/dollars"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView_dollars"
+        android:layout_marginTop="3sp"
+        android:layout_marginHorizontal="40sp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        android:backgroundTint="@color/tine"
+        android:text=""
+        android:textAlignment="center"
+        />
+
+</RelativeLayout>

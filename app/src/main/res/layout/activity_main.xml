@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logo"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:layout_marginTop="30dp"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/textView_adult"
+        android:layout_below="@+id/logo"
+        android:text="@string/plane_adult_text"
+        android:layout_marginHorizontal="42sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:textColorHint="@color/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/adults"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView_adult"
+        android:layout_marginTop="3sp"
+        android:layout_marginHorizontal="40sp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        android:backgroundTint="@color/tine"
+        android:text=""
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textView_child"
+        android:layout_below="@+id/adults"
+        android:text="@string/plane_child_text"
+        android:layout_marginHorizontal="42sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:textColorHint="@color/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/children"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView_child"
+        android:layout_marginTop="3sp"
+        android:layout_marginHorizontal="40sp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/text"
+        android:backgroundTint="@color/tine"
+        android:text=""
+        android:textAlignment="center"
+        />
+
+    <TextView
+        android:id="@+id/textView_group"
+        android:layout_below="@+id/children"
+        android:text="@string/plane_group_text"
+        android:layout_marginHorizontal="42sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20dp"
+        android:textColorHint="@color/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_below="@+id/textView_group"
+        android:layout_marginTop="20dp"
+        android:weightSum="1"
+        android:id="@+id/radioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text="lose weight"
+            android:id="@+id/radioButton1"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hold the weight"
+            android:id="@+id/radioButton2"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textSize="15sp"
+            android:layout_weight="0.13" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="gain weight"
+            android:id="@+id/radioButton3"
+            android:layout_gravity="center_horizontal"
+            android:checked="false"
+            android:textSize="15sp"
+            android:layout_weight="0.13" />
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_button"
+        android:layout_below="@+id/radioGroup"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="70sp"
+        android:textColor="@color/text"
+        android:text="@string/button_text"
+        android:backgroundTint="@color/button"
+        />
+
+    <EditText
+        android:id="@+id/result"
+        android:layout_below="@+id/main_button"
+        android:text="@string/none"
+        android:layout_marginHorizontal="42sp"
+        android:layout_marginTop="30sp"
+        android:textSize="20sp"
+        android:textColorHint="@color/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/tine"/>
+
+</RelativeLayout>
