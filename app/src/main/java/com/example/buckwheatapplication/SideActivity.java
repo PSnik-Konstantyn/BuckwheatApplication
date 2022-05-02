@@ -36,7 +36,10 @@ public class SideActivity extends AppCompatActivity {
     private void getExchange(){
         try {
             doc = Jsoup.connect("https://minfin.com.ua/currency/usd/").get();
-            buckwheatPrice.setText(doc.title().toString());
+//            buckwheatPrice.setText(doc.title().toString());
+            Elements tables = doc.getElementsByAttribute("table-response mfm-table mfcur-table-lg mfcur-table-lg-currency-cur has-no-tfoot");
+            Element dol = doc.body().getElementsByTag("table").first().children().get(1).children().get(2).getElementsByTag("span").first();
+            buckwheatPrice.setText("Dollar to hryvna: "  + dol.text());
         } catch (IOException e) {
             e.printStackTrace();
         }
