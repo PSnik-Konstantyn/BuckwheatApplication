@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 int percentsForGain = 15;
                 int percentsForLose = 20;
                 try {
-                   int  ad = Integer.parseInt(String.valueOf(adults.getText()));
-                   int  ch = Integer.parseInt(String.valueOf(children.getText()));
-                    if (radioButton1.isChecked()){
-                        result.setText("You need: " + ((ad*(caloriesAdultNeed-((caloriesAdultNeed/100)*percentsForLose)) + ch*(caloriesChildNeed-((caloriesChildNeed/100)*percentsForLose)))/caloriesPerKgOfBuckwheat) + " kg of buckwheat");
+                    int ad = Integer.parseInt(String.valueOf(adults.getText()));
+                    int ch = Integer.parseInt(String.valueOf(children.getText()));
+                    if (radioButton1.isChecked()) {
+                        result.setText("You need: " + ((ad * (caloriesAdultNeed - ((caloriesAdultNeed / 100) * percentsForLose)) + ch * (caloriesChildNeed - ((caloriesChildNeed / 100) * percentsForLose))) / caloriesPerKgOfBuckwheat) + " kg of buckwheat");
                         return;
                     } else if (radioButton3.isChecked()) {
-                        result.setText("You need: " + ((ad*(caloriesAdultNeed+((caloriesAdultNeed/100)*percentsForGain)) + ch*(caloriesChildNeed+((caloriesChildNeed/100)*percentsForGain)))/caloriesPerKgOfBuckwheat) + " kg of buckwheat");
+                        result.setText("You need: " + ((ad * (caloriesAdultNeed + ((caloriesAdultNeed / 100) * percentsForGain)) + ch * (caloriesChildNeed + ((caloriesChildNeed / 100) * percentsForGain))) / caloriesPerKgOfBuckwheat) + " kg of buckwheat");
                         return;
                     } else if (radioButton2.isChecked()) {
                         result.setText("You need: " + ((ad * caloriesAdultNeed + ch * caloriesChildNeed) / caloriesPerKgOfBuckwheat) + " kg of buckwheat");
