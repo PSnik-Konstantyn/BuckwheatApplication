@@ -43,9 +43,8 @@ public class SideActivity extends AppCompatActivity {
             //  buckwheatPrice.setText("Dollar to hryvna: " + dol);
             shop = Jsoup.connect("https://aquamarket.ua/en/grechka/6532-sto-pudov-1-kg-krupa-grechnevaya-nezharennaya-m-u.html").get();
             Elements price = shop.getElementsByClass("product-price");
-            String buckPriceString = price.first().text().replace(" ", "").replace("u", "").replace("a", "").replace("h", "");
-            Double buckPrice = Double.parseDouble(buckPriceString);
-            buckwheatPrice.setText(buckPrice / 100 + " uah per 1 kg price");
+            Double buckPrice = Double.parseDouble(price.first().text().replace(" ", "").replace("u", "").replace("a", "").replace("h", ""))/ 100;
+            buckwheatPrice.setText(buckPrice + " uah per 1 kg price");
         } catch (IOException e) {
             e.printStackTrace();
         }
