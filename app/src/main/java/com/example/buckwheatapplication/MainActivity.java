@@ -2,6 +2,7 @@ package com.example.buckwheatapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioButton radioButton3;
     private EditText result;
     private Button button;
+    private Button price;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         radioButton3 = findViewById(R.id.radioButton3);
         result = findViewById(R.id.result);
         button = findViewById(R.id.main_button);
+        price = findViewById(R.id.price_button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,6 +64,14 @@ public class MainActivity extends AppCompatActivity {
                     result.setText("Invalid input");
                 }
 
+            }
+        });
+
+        price.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SideActivity.class);
+                startActivity(intent);
             }
         });
     }

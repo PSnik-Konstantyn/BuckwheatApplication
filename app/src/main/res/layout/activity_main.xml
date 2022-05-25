@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/logo"
         android:layout_marginHorizontal="42sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="20sp"
         android:text="@string/plane_adult_text"
         android:textColorHint="@color/text"
         android:textSize="20sp" />
@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/adults"
         android:layout_marginHorizontal="42sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="20sp"
         android:text="@string/plane_child_text"
         android:textColorHint="@color/text"
         android:textSize="20sp" />
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/children"
         android:layout_marginHorizontal="42sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="20sp"
         android:text="@string/plane_group_text"
         android:textColorHint="@color/text"
         android:textSize="20dp" />
@@ -85,7 +85,7 @@
         android:layout_width="fill_parent"
         android:layout_height="150dp"
         android:layout_below="@+id/textView_group"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:weightSum="1">
 
         <RadioButton
@@ -124,7 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/radioGroup"
         android:layout_marginHorizontal="70sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="15sp"
         android:backgroundTint="@color/button"
         android:text="@string/button_text"
         android:textColor="@color/text" />
@@ -135,10 +135,22 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/main_button"
         android:layout_marginHorizontal="42sp"
-        android:layout_marginTop="30sp"
+        android:layout_marginTop="15sp"
         android:backgroundTint="@color/tine"
         android:text="@string/none"
         android:textColorHint="@color/text"
         android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/price_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result"
+        android:layout_marginHorizontal="70sp"
+        android:layout_marginTop="15sp"
+        android:backgroundTint="@color/button"
+        android:text="@string/price_text"
+        android:textColor="@color/text" />
+
 
 </RelativeLayout>

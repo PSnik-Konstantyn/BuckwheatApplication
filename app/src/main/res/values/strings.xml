@@ -6,6 +6,7 @@
     <string name="plane_child_text">Child(ren):</string>
     <string name="plane_group_text">Choose best option:</string>
     <string name="button_text">Find out</string>
+    <string name="price_text">Price</string>
     <string name="plane">Buckwheat App</string>
     <string name="none"> </string>
     <string name="currency"> Price in the currency </string>
