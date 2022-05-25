@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText result;
     private Button button;
     private Button price;
+    public static int buckwheatWeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +52,20 @@ public class MainActivity extends AppCompatActivity {
                     int ad = Integer.parseInt(String.valueOf(adults.getText()));
                     int ch = Integer.parseInt(String.valueOf(children.getText()));
                     if (radioButton1.isChecked()) {
-                        result.setText("You need: " + ((ad * (caloriesAdultNeed - ((caloriesAdultNeed / 100) * percentsForLose)) + ch * (caloriesChildNeed - ((caloriesChildNeed / 100) * percentsForLose))) / caloriesPerKgOfBuckwheat) + " kg of buckwheat");
+                        buckwheatWeight = (ad * (caloriesAdultNeed - ((caloriesAdultNeed / 100) * percentsForLose)) + ch * (caloriesChildNeed - ((caloriesChildNeed / 100) * percentsForLose))) / caloriesPerKgOfBuckwheat;
+                        result.setText("You need: " + buckwheatWeight + " kg of buckwheat");
                         return;
                     } else if (radioButton3.isChecked()) {
-                        result.setText("You need: " + ((ad * (caloriesAdultNeed + ((caloriesAdultNeed / 100) * percentsForGain)) + ch * (caloriesChildNeed + ((caloriesChildNeed / 100) * percentsForGain))) / caloriesPerKgOfBuckwheat) + " kg of buckwheat");
+                        buckwheatWeight = (ad * (caloriesAdultNeed + ((caloriesAdultNeed / 100) * percentsForGain)) + ch * (caloriesChildNeed + ((caloriesChildNeed / 100) * percentsForGain))) / caloriesPerKgOfBuckwheat;
+                        result.setText("You need: " + buckwheatWeight + " kg of buckwheat");
                         return;
                     } else if (radioButton2.isChecked()) {
-                        result.setText("You need: " + ((ad * caloriesAdultNeed + ch * caloriesChildNeed) / caloriesPerKgOfBuckwheat) + " kg of buckwheat");
+                        buckwheatWeight = (ad * caloriesAdultNeed + ch * caloriesChildNeed) / caloriesPerKgOfBuckwheat;
+                        result.setText("You need: " + buckwheatWeight  + " kg of buckwheat");
                         return;
-                    } else result.setText("Choose best option for you");
+                    } else {
+                        result.setText("Choose best option for you");
+                    }
                 } catch (Exception e) {
                     result.setText("Invalid input");
                 }
