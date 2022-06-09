@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
                 // lose weight -20% , gain weight +15%, hold 0%
                 int caloriesAdultNeed = 2500;
                 int caloriesChildNeed = 2000;
-                int caloriesPerKgOfBuckwheat = 1050;
+                int caloriesPerKgOfBuckwheat = 3130;
                 int percentsForGain = 15;
                 int percentsForLose = 20;
                 try {
